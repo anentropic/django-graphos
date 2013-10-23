@@ -35,7 +35,7 @@ class BarChart(BaseHighCharts):
 
 class ColumnChart(BaseHighCharts):
     def get_chart_type(self):
-        return "line"
+        return "column"
 
 
 class PieChart(BaseHighCharts):
