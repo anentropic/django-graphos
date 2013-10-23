@@ -17,7 +17,10 @@ class BaseMorrisChart(BaseChart):
     def get_y_keys(self):
         return self.data_source.to_json(self.data_source.get_header()[1:])
 
-    def get_template(self):
+    def get_html_template(self):
+        return "graphos/morris/html.html"
+
+    def get_js_template(self):
         return "graphos/morris/chart.html"
 
 
@@ -39,5 +42,5 @@ class DonutChart(BaseMorrisChart):
     def chart_type(self):
         return "Donut"
 
-    def get_template(self):
+    def get_js_template(self):
         return "graphos/morris/donut_chart.html"
